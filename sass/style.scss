@@ -1,0 +1,11 @@
+
+$font-body: 'Roboto', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+$font-title:'Lemonada', cursive;
+
+.header{
+  &:__navbar__logo{
+    width: 250px;
+    height: 100px;
+  }
+}
