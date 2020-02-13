@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans');
 
- $brightOrange:#D15747;
+ $Orange:#D15747;
  $darkBrown:#BB9457;
- $orange:#FF614C; 
+ $brightorange:#FF614C; 
  $brown:#382923;
  $black:#191919;
  $grey:#A9B2AC;
@@ -24,6 +24,7 @@ body{
   font-family: 'La Belle Aurore',cursive;
 }
 /* End of global styles */
+
 /* header */
 .header{
   height: 100vh;
@@ -32,10 +33,37 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-
-
-
-
+  &__banner{
+    text-align: center;
+    z-index: 3;
+  &__title{
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--brightOrange);
+  }
+  &__icons{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns:repeat(4,2rem) ;
+    grid-gap: 0.5rem;
+    justify-content: center;
+  }
+  &__social-icon{
+    display:block;
+    text-decoration: none;
+    color: var(--black);
+    border: 0.1rem solid var(--black);
+    border-radius: 50%;
+    padding: 0.25rem;
+    transition: all  0.5s linear ;
+    &:hover{
+      background: var(--brightOrange);
+      color: var(--black);
+    }
+  }
+  }
 
 }
 @media screen and (max-width:768px){
@@ -43,39 +71,10 @@ body{
     background: url('../img/headerBcg.jpeg')center/cover no-repeat fixed;
   }
 }
-.banner{
-  text-align: center;
-  z-index: 3;
-}
-.banner_title{
-  font-size: 4rem;
-  text-transform: capitalize;
-  color: var(--brightYellow);
-}
+
 @media screen and (min-width:768px){
   .banner_title{
     font-size: 9rem;
   }
 }
-.banner_social-icon{
-  display:block;
-  text-decoration: none;
-  color: var(--black);
-  border: 0.1rem solid var(--black);
-  border-radius: 50%;
-  padding: 0.25rem;
-  transition: all  0.5s linear ;
-}
-.banner_social-icon:hover{
-  background: var(--brightYellow);
-  color: var(--black);
-}
-.banner_icons{
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns:repeat(4,2rem) ;
-  grid-gap: 0.5rem;
-  justify-content: center;
-}
+
