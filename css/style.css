@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* global styles */
+.bell-fonts {
+  font-family: 'La Belle Aurore',cursive;
+}
+
+/* End of global styles */
+/* header */
+.header {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80%;
+      grid-template-columns: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header__banner {
+  text-align: center;
+  z-index: 3;
+}
+
+.header__banner__title {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #FF614C;
+}
+
+.header__banner__icons {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2rem)[4];
+      grid-template-columns: repeat(4, 2rem);
+  grid-gap: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__banner__social-icon {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  border: 0.1rem solid #191919;
+  border-radius: 50%;
+  padding: 0.25rem;
+  -webkit-transition: all  0.5s linear;
+  transition: all  0.5s linear;
+}
+
+.header__banner__social-icon:hover {
+  background: #FF614C;
+  color: #191919;
+}
+
+.header__video-container {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
