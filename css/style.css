@@ -56,7 +56,7 @@
 .header__banner__social-icon {
   display: block;
   text-decoration: none;
-  color: var(--black);
+  color: #191919;
   border: 0.1rem solid #191919;
   border-radius: 50%;
   padding: 0.25rem;
@@ -69,7 +69,7 @@
   color: #191919;
 }
 
-.header__video-container {
+.header__banner__video-container {
   display: block;
   width: 100%;
   margin-left: auto;
