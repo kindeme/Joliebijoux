@@ -46,7 +46,7 @@ body {
 }
 
 .header__banner__title {
-  font-size: 4rem;
+  font-size: 5rem;
   text-transform: capitalize;
   color: #FF614C;
 }
@@ -54,6 +54,12 @@ body {
 @media screen and (min-width: 768px) {
   .header__banner__title {
     font-size: 9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__banner__title {
+    color: white;
   }
 }
 
@@ -87,9 +93,18 @@ body {
   color: #191919;
 }
 
-.header__banner__video-container {
-  display: block;
+.header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  z-index: -1;
+}
+
+.header__video__item {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
