@@ -12,26 +12,40 @@
  padding: 0;
  box-sizing: border-box;
 }
+/* global styles */
+.bell-fonts{
+  font-family: 'La Belle Aurore',cursive;
+}
+// media query setup
+@mixin smallquery($arg){
+  @media screen and (max-width:$arg){
+    @content;
+  }
+}
+@mixin bigquery($arg){
+  @media screen and (min-width:$arg){
+    @content;
+  }
+}
+// End of global styles 
+
 body{
   color: $black;
   font-family: 'Opens Sans',"sans-serif";
   background: linear-gradient(rgba(255,255,255,0.25),rgba(255,255,255,0.85)), url('../image/bodyBcg.jpeg')center/cover no-repeat;
 }
-
-/* global styles */
-.bell-fonts{
-  font-family: 'La Belle Aurore',cursive;
-}
-/* End of global styles */
-
 /* header */
 .header{
   height: 100vh;
   display: grid;
-  // grid-template-columns: 80%;
+  grid-template-columns: 80%;
   justify-content: center;
   align-items: center;
   position: relative;
+  @include smallquery(768px){
+    background: url('../image/headerBcg.jpg')center/cover no-repeat fixed;
+  }
+
   &__banner{
     text-align: center;
     z-index: 3;
@@ -39,6 +53,9 @@ body{
     font-size: 4rem;
     text-transform: capitalize;
     color: $brightOrange;
+    @include bigquery(768px){
+      font-size: 9rem;
+    }
   }
   &__icons{
     width: 50%;
@@ -48,6 +65,7 @@ body{
     grid-template-columns:repeat(4,2rem) ;
     grid-gap: 0.5rem;
     justify-content: center;
+    
     &__social-icon{
       display:block;
       text-decoration: none;
@@ -56,6 +74,7 @@ body{
       border-radius: 50%;
       padding: 0.25rem;
       transition: all  0.5s linear ;
+      // color: white;
       &:hover{
         background: $brightOrange;
         color: $black;
@@ -71,17 +90,7 @@ body{
    margin-right: auto;
  }
 }
+
 }
 
-// @media screen and (max-width:768px){
-//   .header{
-//     background: url('../img/headerBcg.jpeg')center/cover no-repeat fixed;
-//   }
-// }
-
-// @media screen and (min-width:768px){
-//   .banner_title{
-//     font-size: 9rem;
-//   }
-// }
 
