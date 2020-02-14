@@ -27,6 +27,18 @@
     @content;
   }
 }
+// navBar animation
+@keyframes pulse{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 // End of global styles 
 
 body{
@@ -85,20 +97,65 @@ body{
       }
       }
 
-}
-// video style
-&__video{
-position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- z-index:-1;
- &__item{
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
- }
-}
-}
+    }
+  // video style
+   &__video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    &__item{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    }
+  // nav Btn
+  &__navBtn{
+    position: fixed;
+    top: 5%;
+    right:5%;
+    font-size: 3.5rem;
+    color: $brightOrange;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    // animation-name: pulse;
+    // animation-duration:2s;
+    // animation-iteration-count: infinite;
+
+  }
+  &__nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: lighten($brightOrange,10%);
+    // transform: translateX(-100%);
+    z-index: 5;
+    &__links{
+      list-style-type: none;
+      &__single-link{
+        display: block;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $brown;
+        font-size: 1.5rem;
+        padding: 0.75rem 1rem;
+        transition: all 2s ease-in-out;
+        &:hover{
+          background: $brown;
+          color:lighten($brightOrange,10%);
+          padding-left: 1.5rem;
+        }
+      }
+      .nav__logo:hover{
+        // width: 10rem;
+        background: $grey;
+      }
+    }
+  }
+  }
+
 
