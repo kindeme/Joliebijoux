@@ -48,6 +48,26 @@ body {
   background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.85)), url("../image/bodyBcg.jpeg") center/cover no-repeat;
 }
 
+/*preloader style*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FF614C;
+  z-index: 999;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* End preloader style*/
 /* header */
 .header {
   height: 100vh;
@@ -156,7 +176,6 @@ body {
   left: 0;
   height: 100%;
   background: #ff8e7f;
-  z-index: 5;
 }
 
 .header__nav__links {
