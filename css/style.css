@@ -213,5 +213,16 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    border-radius: 0.5rem;
+    padding: .2rem .2rem;
+  }
+  .header__switch-container__video__switch-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #382923;
+    border-radius: 0.5rem;
   }
 }

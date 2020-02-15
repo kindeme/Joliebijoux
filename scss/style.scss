@@ -180,7 +180,18 @@ body{
         text-transform: uppercase;
         display: flex;
         justify-content:space-between ;
-
+        border-radius:0.5rem ; 
+        padding: .2rem .2rem;   
+      }
+      
+      &__video__switch-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background: $brown;
+        border-radius: 0.5rem;
       }
     }
   }
