@@ -39,6 +39,16 @@
     transform: scale(1);
   }
 }
+//  navlinks animation
+@keyframes links{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
 // End of global styles 
 
 body{
@@ -149,7 +159,9 @@ align-items: center;
     left: 0;
     height: 100%;
     background: lighten($brightOrange,10%);
-    // transform: translateX(-100%);
+    width: 0;
+    overflow: hidden;
+    transition: all 1s linear;
     &__links{
       list-style-type: none;
       &__single-link{
@@ -211,6 +223,10 @@ align-items: center;
       }
     }
   }
+  .nav__show{
+    width: 10rem;
   }
+  }
+
 
 

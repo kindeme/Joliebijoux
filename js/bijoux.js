@@ -7,6 +7,6 @@ window.addEventListener('load',function(){
 });
 //nav btn
 document.querySelector('.header__navBtn').addEventListener('click',function(){
-  document.querySelector('.header__nav')
+  document.querySelector('.header__nav').classList.toggle('nav__show');
 
 })
