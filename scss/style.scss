@@ -133,7 +133,7 @@ body{
     height: 100%;
     background: lighten($brightOrange,10%);
     // transform: translateX(-100%);
-    z-index: 5;
+    z-index:5;
     &__links{
       list-style-type: none;
       &__single-link{
@@ -150,9 +150,37 @@ body{
           padding-left: 1.5rem;
         }
       }
-      .nav__logo:hover{
-        // width: 10rem;
-        background: $grey;
+      .nav__logo{
+       img{
+         width: 200px;
+         height: 100px;
+         margin-left: -4rem;
+       }
+        &:hover{
+          // width: 10rem;
+          background: $grey;
+        }
+      }
+    }
+  }
+  // video switch
+  &__switch-container{
+    display: none;
+    @include smallquery(768px){
+      display: block;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      z-index: 5;
+
+      &__video__switch{
+        position: relative;
+        width: 5rem;
+        background:$Orange;
+        text-transform: uppercase;
+        display: flex;
+        justify-content:space-between ;
+
       }
     }
   }

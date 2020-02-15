@@ -180,6 +180,38 @@ body {
   padding-left: 1.5rem;
 }
 
+.header__nav__links .nav__logo img {
+  width: 200px;
+  height: 100px;
+  margin-left: -4rem;
+}
+
 .header__nav__links .nav__logo:hover {
   background: #A9B2AC;
+}
+
+.header__switch-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__switch-container {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+  }
+  .header__switch-container__video__switch {
+    position: relative;
+    width: 5rem;
+    background: #D15747;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
