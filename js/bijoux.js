@@ -12,7 +12,11 @@ window.addEventListener('load',function(){
 //nav btn
 document.querySelector('.header__navBtn').addEventListener('click',function(){
  ui.showNav();
-})
+});
+// control the video
+document.querySelector('.header__switch-container__video__switch').addEventListener('click',function(){
+ ui.videoControls();
+});
 }
 //  UI constructor
 function UI(){}
@@ -24,5 +28,16 @@ UI.prototype.hidePreloader = function(){
 UI.prototype.showNav = function(){
   document.querySelector('.header__nav').classList.toggle('nav__show');
 }
-// control the video
-// document.querySelector('.header__switch-container__video__switch').addEventListener('click',function({})
+//  control video
+UI.prototype.videoControls = function(){
+  let btn = document.querySelector('.header__switch-container__video__switch-btn');
+  if(!btn.classList.contains('btnSlide')){
+    btn.classList.add('btnSlide');
+    document.querySelector('.header__video__item').pause();
+  } else{
+    btn.classList.remove('btnSlide');
+    document.querySelector('.header__video__item').play();
+  }
+
+}
+

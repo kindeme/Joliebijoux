@@ -194,7 +194,7 @@ align-items: center;
   // video switch
   &__switch-container{
     display: none;
-    @include smallquery(768px){
+    @include bigquery(768px){
       display: block;
       position: absolute;
       bottom: 5%;
@@ -209,7 +209,8 @@ align-items: center;
         display: flex;
         justify-content:space-between ;
         border-radius:0.5rem ; 
-        padding: .2rem .2rem;   
+        padding: .2rem .2rem;  
+        cursor: pointer; 
       }
       
       &__video__switch-btn{
@@ -221,10 +222,14 @@ align-items: center;
         background: $brown;
         border-radius: 0.5rem;
       }
+      
     }
   }
   .nav__show{
     width: 10rem;
+  }
+  .btnSlide{
+    left: 50%;
   }
   }
 

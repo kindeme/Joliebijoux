@@ -239,7 +239,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .header__switch-container {
     display: block;
     position: absolute;
@@ -260,6 +260,7 @@ body {
             justify-content: space-between;
     border-radius: 0.5rem;
     padding: .2rem .2rem;
+    cursor: pointer;
   }
   .header__switch-container__video__switch-btn {
     position: absolute;
@@ -274,4 +275,8 @@ body {
 
 .header .nav__show {
   width: 10rem;
+}
+
+.header .btnSlide {
+  left: 50%;
 }
