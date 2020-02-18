@@ -393,7 +393,7 @@ body {
 
 .success {
   display: block;
-  display: green;
+  color: green;
   border-color: green;
 }
 

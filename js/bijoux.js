@@ -4,6 +4,7 @@
 // window event list
 
 eventListener();
+
 function eventListener(){
   const ui = new UI();
 window.addEventListener('load',function(){
@@ -17,14 +18,14 @@ document.querySelector('.header__navBtn').addEventListener('click',function(){
 document.querySelector('.header__switch-container__video__switch').addEventListener('click',function(){
  ui.videoControls();
 });
-document.querySelector('.drinkk-form').addEventListener('.submit',function(e){
+document.querySelector('.drink-form').addEventListener('submit',function(e){
   e.preventDefault();
   const name = document.querySelector('.input-name').value;
   const lastName = document.querySelector('.input-lastname').value;
   const email = document.querySelector('.input-email').value;
   let value = ui.checkEmpty(name,lastName,email);
   if(value){
-
+    ui.showFeedBack('customer add to the list','success')
   }else{
     ui.showFeedBack('some form values empty','error')
   }
@@ -58,20 +59,33 @@ UI.prototype.videoControls = function(){
 
 UI.prototype.checkEmpty = function(name,lastName,email){
   let result;
-  if(name ===" " || lastName ===" " || email ===" "){
-
+  if(name ==="" || lastName ===" " || email === " "){
     result = false;
   } else{
     result = true;
   }
-  return result;
+ return result;
 }
 UI.prototype.showFeedBack = function(text,type){
   if(type ==='success'){
-
-  }else if(type ==='error'){
-    let feedback = documment.querySelector('.drink-form__feedback');
-    feedback.innerText = text;l
+    let feedback = document.querySelector('.drink-form__feedback');
+    feedback.classList.add('success');
+    feedback.innerText = text;
+    this.removeAlert('success')
+  }
+  else if(type ==='error'){
+    let feedback = document.querySelector('.drink-form__feedback');
+    feedback.classList.add('error');
+    feedback.innerText = text;
+    this.removeAlert('error');
 
   }
+}
+
+// remove alert
+UI.prototype.removeAlert = function(type){
+  setTimeout(function(){
+    document.querySelector('.drink-form__feedback').classList.remove(type);
+
+  },3000)
 }
