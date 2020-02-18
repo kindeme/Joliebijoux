@@ -27,6 +27,17 @@
     @content;
   }
 }
+// section padding
+@mixin padding{
+  padding: 3rem 0;
+}
+@mixin gridContainer{
+  max-width: 90vh;
+}
+@mixin imgSetting{
+  width: 100%;
+  display: block;
+}
 // navBar animation
 @keyframes pulse{
   0%{
@@ -48,6 +59,7 @@
     transform: translateX(0);
   }
 }
+
 
 // End of global styles 
 
@@ -232,6 +244,16 @@ align-items: center;
     left: 50%;
   }
   }
-
+  // /*  about section/
+.about__img-item{
+  @include imgSetting;
+}
+.section-padding{
+  @include padding;
+}
+.grid-container{
+  @include gridContainer;
+  margin: 2rem auto;
+}
 
 

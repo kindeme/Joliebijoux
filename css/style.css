@@ -280,3 +280,17 @@ body {
 .header .btnSlide {
   left: 50%;
 }
+
+.about__img-item {
+  width: 100%;
+  display: block;
+}
+
+.section-padding {
+  padding: 3rem 0;
+}
+
+.grid-container {
+  max-width: 90vh;
+  margin: 2rem auto;
+}
