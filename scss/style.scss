@@ -307,3 +307,62 @@ align-items: center;
     
   }
 }
+
+// drink section
+.drink{
+  background: $brown;
+  color: $brightOrange;
+  text-transform: capitalize;
+}
+.drink-form,.drink-card{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 70%;
+  justify-content: center;
+  grid-row-gap: 1.25rem;
+}
+.drink-form__feedback{
+  border: 0.1rem solid $brightOrange;
+  padding: 0.25rem;
+  display: none;
+}
+.error{
+  display: block;
+  color: red;
+  border-color: red;
+}
+.success{
+  display: block;
+  display: green;
+  border-color: green;
+}
+.drink-form__title,.drink-card__title{
+  font-size: 3rem;
+}
+.input-name,.input-lastname,.input-email{
+  width: 100%;
+}
+.input-name,.input-lastname,.input-email,.input-submit{
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(111,87,77,0.6);
+  border: none;
+  outline: none;
+  // padding: 0.2rem ;
+}
+.input-name::placeholder,.input-lastname::placeholder,.input-email::placeholder{
+  color: $darkBrown;
+  text-transform: capitalize;
+}
+.input-submit{
+  background: $Orange;
+  color: $black;
+  transition: all 0.5s linear;
+  cursor: pointer;
+  text-transform:uppercase ;
+  &:hover{
+    opacity: 0.6;
+    
+  }
+}
