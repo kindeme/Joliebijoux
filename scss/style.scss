@@ -352,7 +352,7 @@ align-items: center;
   // padding: 0.2rem ;
 }
 .input-name::placeholder,.input-lastname::placeholder,.input-email::placeholder{
-  color: $darkBrown;
+  color: lighten( $brightOrange, 10%);
   text-transform: capitalize;
 }
 .input-submit{
@@ -365,4 +365,27 @@ align-items: center;
     opacity: 0.6;
     
   }
+}
+.drink-card__list{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 2rem;
+  @include bigquery(768px){
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+  }
+}
+.person{
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  text-align: left;
+  grid-gap:1rem;
+  border: 0.1rem solid rgba(111,87,77,0.6);
+  padding:1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+.person__thumbnail{
+  border-radius: 50%;
 }

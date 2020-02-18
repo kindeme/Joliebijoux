@@ -415,22 +415,22 @@ body {
 }
 
 .input-name::-webkit-input-placeholder, .input-lastname::-webkit-input-placeholder, .input-email::-webkit-input-placeholder {
-  color: #BB9457;
+  color: #ff8e7f;
   text-transform: capitalize;
 }
 
 .input-name:-ms-input-placeholder, .input-lastname:-ms-input-placeholder, .input-email:-ms-input-placeholder {
-  color: #BB9457;
+  color: #ff8e7f;
   text-transform: capitalize;
 }
 
 .input-name::-ms-input-placeholder, .input-lastname::-ms-input-placeholder, .input-email::-ms-input-placeholder {
-  color: #BB9457;
+  color: #ff8e7f;
   text-transform: capitalize;
 }
 
 .input-name::placeholder, .input-lastname::placeholder, .input-email::placeholder {
-  color: #BB9457;
+  color: #ff8e7f;
   text-transform: capitalize;
 }
 
@@ -445,4 +445,40 @@ body {
 
 .input-submit:hover {
   opacity: 0.6;
+}
+
+.drink-card__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-row-gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .drink-card__list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+.person {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 1fr;
+      grid-template-columns: auto auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  grid-gap: 1rem;
+  border: 0.1rem solid rgba(111, 87, 77, 0.6);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.person__thumbnail {
+  border-radius: 50%;
 }
