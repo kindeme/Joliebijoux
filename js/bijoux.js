@@ -6,7 +6,7 @@
 eventListener();
 
 function eventListener(){
-  const ui = new UI();
+const ui = new UI();
 window.addEventListener('load',function(){
  ui.hidePreloader();
 });
@@ -24,12 +24,17 @@ document.querySelector('.drink-form').addEventListener('submit',function(e){
   const lastName = document.querySelector('.input-lastname').value;
   const email = document.querySelector('.input-email').value;
   let value = ui.checkEmpty(name,lastName,email);
+
   if(value){
-    ui.showFeedBack('customer add to the list','success')
+    let customer = new Customer(name,lastName,email);
+    ui.addCustomer(customer);
+    ui.showFeedBack('customer add to the list','success');
+    ui.clearFields();
   }else{
     ui.showFeedBack('some form values empty','error')
   }
 });
+// ui.addCustomer()
 }
 
 
@@ -88,4 +93,30 @@ UI.prototype.removeAlert = function(type){
     document.querySelector('.drink-form__feedback').classList.remove(type);
 
   },3000)
+}
+
+// add customer
+UI.prototype.addCustomer = function(customer){
+  const images = [1,2,3,4];
+  let random = Math.floor(Math.random() *images.length )
+  const div = document.createElement('div');
+  div.classList.add('person');
+  div.innerHTML = `
+  <img src="../image/person-${random+1}.jpg" alt="" class="person__thumbnail">
+  <h4 class="person__name">${customer.name}</h4>
+  <h4 class="person__lastname">${customer.lastname}</h4>`;
+  document.querySelector('.drink-card__list').appendChild(div);
+}
+
+// clear fiels
+UI.prototype.clearFields = function(){
+document.querySelector('.input-name').value ='';
+ document.querySelector('.input-lastname').value = '';
+document.querySelector('.input-email').value = '';
+}
+// collect customer
+function Customer(name, lastname, email){
+  this.name = name;
+  this.lastname = lastname;
+  this.email = email;
 }
