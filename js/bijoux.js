@@ -37,8 +37,6 @@ document.querySelector('.drink-form').addEventListener('submit',function(e){
 // ui.addCustomer()
 }
 
-
-
 //  UI constructor
 function UI(){}
 //  hide function
@@ -49,6 +47,7 @@ UI.prototype.hidePreloader = function(){
 UI.prototype.showNav = function(){
   document.querySelector('.header__nav').classList.toggle('nav__show');
 }
+
 //  control video
 // play and pause
 UI.prototype.videoControls = function(){
@@ -94,7 +93,6 @@ UI.prototype.removeAlert = function(type){
 
   },3000)
 }
-
 
 // add customer
 UI.prototype.addCustomer = function(customer){
