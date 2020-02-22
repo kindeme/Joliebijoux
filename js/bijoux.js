@@ -95,6 +95,7 @@ UI.prototype.removeAlert = function(type){
   },3000)
 }
 
+
 // add customer
 UI.prototype.addCustomer = function(customer){
   const images = [1,2,3,4];
